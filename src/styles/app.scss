@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  transition: all 0.5s ease;
+  position: relative;
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    height: 93vh;
+  }
+}
+
+.library-active {
+  margin-left: 30%;
+}
+
+// Components
+@import "./components/song";
+@import "./components/player";
+@import "./components/library";
+@import "./components/library-song";
+@import "./components/nav";

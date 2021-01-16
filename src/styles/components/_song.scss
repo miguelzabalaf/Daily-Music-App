@@ -1,0 +1,27 @@
+.song {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__cover {
+    width: 20%;
+    border-radius: 50%;
+  }
+  &__name {
+    padding: 3rem 1rem 1rem;
+  }
+  &__artist {
+    color: #445b78;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song {
+    &__cover {
+      width: 60%;
+    }
+  }
+}
