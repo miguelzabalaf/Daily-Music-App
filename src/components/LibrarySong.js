@@ -1,13 +1,13 @@
 import React from 'react'
 import { isMobile } from '../helpers/isMobile'
 
-export const LibrarySong = ({song, songs, setCurrentSong, audioRef, isPlaying, setIsPlaying, currentSong, libraryStatus, setLibraryStatus}) => {
+export const LibrarySong = ({ song, songs, setCurrentSong, audioRef, isPlaying, setIsPlaying, currentSong, libraryStatus, setLibraryStatus }) => {
 
   const SONG = audioRef.current
 
   const songSelectHandler = () => {
-    const selectedSong = songs.filter( state => state.id === song.id);
-    setCurrentSong({...song, active: true});
+    // const selectedSong = songs.filter( state => state.id === song.id);
+    setCurrentSong({ ...song, active: true });
     closeLibrary();
     setIsPlaying(true);
     // Check if the song is playing
@@ -32,12 +32,12 @@ export const LibrarySong = ({song, songs, setCurrentSong, audioRef, isPlaying, s
   }
 
   return (
-    <div 
+    <div
       onClick={songSelectHandler}
-      className={`library-song ${ currentSong.id === song.id ? 'songActive' : '' }`}
+      className={`library-song ${currentSong.id === song.id ? 'songActive' : ''}`}
     >
       <div className="library-song__cover">
-        <img src={song.cover} alt="song.name"/>
+        <img src={song.cover} alt="song.name" />
       </div>
       <div className="library-song__details">
         <h3 className="library-song__details--name">{song.name}</h3>

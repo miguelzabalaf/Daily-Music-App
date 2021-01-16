@@ -56,6 +56,7 @@ const App = () => {
         setSongInfo={setSongInfo}
         songInfo={songInfo}
         songs={songs}
+        setSongs={setSongs}
       />
       <Library
         libraryStatus={libraryStatus}
